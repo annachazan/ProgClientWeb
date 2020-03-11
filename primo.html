@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Número primo </title>
+<script>
+ 
+  function numeroprimo()
+  { var x= document.getElementById("numero").value;
+  var z=0;
+   for(i=1;i<=x;i++)
+   {
+   y=x%i;
+   if (y==0)
+   z++;
+   }
+   
+   if (z==2)
+   n=" é primo";
+    else 
+	n=" não é primo";
+	
+	
+	resposta="o número " +x+n;
+	document.getElementById("result").innerHTML=resposta;
+	}
+	</script>
+	</head>
+	<body>
+	
+
+
+	<h1 id="result">Insira um número</h1>
+	<input type="number" id="numero"/>
+	<button onclick="javascript:numeroprimo()">EXECUTAR</button>
+	</body>
+	</html>
+	

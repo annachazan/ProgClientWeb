@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Número fatorial </title>
+<script>
+
+function fatorial()
+{
+	 var x=document.getElementById("numero").value;
+     var y=0;
+     var z=1;
+     var o=0;
+	 for (i=1;i<x; i++)
+	 {
+      
+      o= x-i;
+      z=z*o;
+
+    }
+    y=x*z
+
+	resposta="o faotrial desse numero é " +y;
+	document.getElementById("result").innerHTML=resposta;
+
+}
+
+
+
+	</script>
+	</head>
+	<body>
+	
+
+	
+	<h1 id="result">Insira um número</h1>
+	<input type="number" id="numero"/>
+	<button onclick="javascript:fatorial()">EXECUTAR</button>
+	</body>
+	</html>
+	
