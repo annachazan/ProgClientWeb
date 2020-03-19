@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tênis Polar</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+    function tenis(){
+      var palavra = document.getElementById("valor").value;
+      var tam = palavra.length;
+
+      for(var i = 0; i < tam; i++){
+        var letra = palavra.charAt(i);
+        switch(letra){
+          case 'p': palavra = palavra.replace('p','t');break;
+          case 'o': palavra = palavra.replace('o','e');break;
+          case 'l': palavra = palavra.replace('l','n');break;
+          case 'a': palavra = palavra.replace('a','i');break;
+          case 'r': palavra = palavra.replace('r','s');break;
+          default: break;
+        }
+      }
+
+      document.getElementById("resultado").innerHTML = "Tradução: "+palavra+"."
+    }  
+  </script>
+
+</head>
+<body>
+	<input id="valor">
+	<button type="submit" onclick="tenis()">Descobrir</button>
+  <h1 id="resultado">Tradução:</h1>
+</body>
+</html>

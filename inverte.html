@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inverte Frase</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+    function inverte(){
+      var x= document.getElementById("valor").value;
+      var tam = x.length-1;
+      x = x.split('');
+
+      for(var i = 0; i < tam/2; i++){
+        var letraIni = x[i];
+        var letraFim = x[tam-i];
+
+        x[i] = letraFim;
+        x[tam-i] = letraIni;
+      }
+      x = x.join('');
+      document.getElementById("resultado").innerHTML = "Tradução: "+x
+    }  
+  </script>
+
+</head>
+<body>
+  <h1 id="resultado">Digite um texto para vê-lo invertido:</h1>
+	<input id="valor">
+	<button type="submit" onclick="inverte()">Enviar</button>
+  
+</body>
+</html>

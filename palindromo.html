@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindromo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+    function palindromo(){
+      var x = document.getElementById("valor").value;
+      var qtd=0;
+      var tam = x.length-1;
+      for(var i = 0; i < tam; i++)
+        if(x.charAt(i) == x.charAt(tam-i))
+          qtd++;
+      if(i==qtd)
+        document.getElementById("resultado").innerHTML = "A palavra '"+x+"' <strong>é</strong> um palíndromo.";
+      else
+        document.getElementById("resultado").innerHTML = "A palavra '"+x+"' <strong>não</strong> é um palíndromo.";
+    }  
+  </script>
+
+</head>
+<body>
+    <h1 id="resultado">Digete uma palavra e descubra se ela é um palíndromo!</h1>
+	<input id="valor">
+	<button onclick="javascript:palindromo()">Descobrir</button>
+  
+</body>
+</html>
